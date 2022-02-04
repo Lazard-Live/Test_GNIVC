@@ -1,23 +1,103 @@
 <!DOCTYPE html>
-<html class="no-js" lang="">
+<html lang="ru">
   <head>
-    <meta charset="utf-8" />
-    <title></title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Тестовое задание ГНИВЦ</title>
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/main.css" />
   </head>
 
   <body>
-    <header class="header">
-      <div class="header__text"></div>
+    <header>
+      <div class="head">
+        <div class="head__text">Тестовое задание</div>
+      </div>
     </header>
 
     <main>
-      <div class="form"></div>
-    </main>
+      <div class="label">
+        <div class="label__title">Задача:</div>
+        <ol class="label__subtitle">
+          <li>
+            Пользователь вводит одно русское слово - существительное в
+            единственном числе и именительном падеже;
+          </li>
+          <li>
+            Пользователь выбирает падеж из списка предложенных (доступны все
+            шесть падежей);
+          </li>
+          <li>
+            Пользователю отображается введённое им слово, преобразованное в
+            форму заданного падежа.
+          </li>
+        </ol>
+      </div>
 
+      <form id="form" class="form">
+        <div class="form__text">Решение</div>
+        <span class="input-word">
+          <label
+            >1. Введите слово:
+            <input
+              id="word"
+              type="text"
+              pattern="^[А-Яа-яЁё]+$"
+              class="form__input"
+              required
+            />
+          </label>
+        </span>
+        <div class="setting">
+          <div class="setting__label">2. Выберите падеж:</div>
+          <span class="setting__line">
+            <label
+              >Именительный <i>(кто, что?)</i>
+              <input name="settings" type="radio" value="0" checked />
+            </label>
+          </span>
+          <span class="setting__line">
+            <label
+              >Родительный <i>(кого, чего?)</i>
+              <input name="settings" type="radio" value="1" />
+            </label>
+          </span>
+          <span class="setting__line">
+            <label
+              >Дательный <i>(кому, чему?)</i>
+              <input name="settings" type="radio" value="2" />
+            </label>
+          </span>
+          <span class="setting__line">
+            <label
+              >Винительный <i>(кого, что?)</i>
+              <input name="settings" type="radio" value="3" />
+            </label>
+          </span>
+          <span class="setting__line">
+            <label
+              >Творительный <i>(кем, чем?)</i>
+              <input name="settings" type="radio" value="4" />
+            </label>
+          </span>
+          <span class="setting__line">
+            <label
+              >Предложный <i>(о ком,о чем?)</i>
+              <input name="settings" type="radio" value="5" />
+            </label>
+          </span>
+        </div>
+
+        <div class="output">
+          3. <button id="go">Показать результат</button>
+          <div><label class="result" id="result"></label></div>
+        </div>
+      </form>
+    </main>
+    <footer class="footer">
+      <div>Исполнитель: Дорецкий Б.В.</div>
+    </footer>
     <script src="js/main.js"></script>
   </body>
 </html>
